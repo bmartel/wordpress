@@ -22,6 +22,7 @@
 // ** Site settings - You can get this info from your domain provider ** //
 define('WP_HOME', '');
 define('WP_SITEURL', '');
+define('FORCE_SSL_ADMIN', false);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */

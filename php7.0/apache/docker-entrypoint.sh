@@ -151,6 +151,9 @@ EOPHP
 	if [ "$WORDPRESS_DEBUG" ]; then
 		set_config 'WP_DEBUG' 1 boolean
 	fi
+	if [ "$WORDPRESS_FORCE_SSL_ADMIN" ]; then
+		set_config 'FORCE_SSL_ADMIN' 1 boolean
+	fi
 
 	TERM=dumb php -- "$WORDPRESS_DB_HOST" "$WORDPRESS_DB_USER" "$WORDPRESS_DB_PASSWORD" "$WORDPRESS_DB_NAME" <<'EOPHP'
 <?php
