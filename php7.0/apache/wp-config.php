@@ -22,9 +22,8 @@
 // ** Site settings - You can get this info from your domain provider ** //
 define('WP_HOME', '');
 define('WP_SITEURL', '');
-define('FORCE_SSL_ADMIN', false);
-if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)  
-    $_SERVER['HTTPS']='on';
+define('FORCE_SSL_ADMIN', true);
+$_SERVER['HTTPS']='on';
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'database_name_here');
