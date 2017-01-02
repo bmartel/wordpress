@@ -109,6 +109,8 @@ EOPHP
 		sed -ri -e "s/($start\s*).*($end)$/\1$(sed_escape_rhs "$(php_escape "$value" "$var_type")")\3/" wp-config.php
 	}
 
+	set_config 'WP_HOME' "$WORDPRESS_HOME"
+	set_config 'WP_SITEURL' "$WORDPRESS_SITEURL"
 	set_config 'DB_HOST' "$WORDPRESS_DB_HOST"
 	set_config 'DB_USER' "$WORDPRESS_DB_USER"
 	set_config 'DB_PASSWORD' "$WORDPRESS_DB_PASSWORD"
